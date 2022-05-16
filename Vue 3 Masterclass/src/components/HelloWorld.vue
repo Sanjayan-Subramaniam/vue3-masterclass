@@ -1,10 +1,13 @@
 <script setup>
+import sourceData from '@/data.json';
+console.log(sourceData);
+
 defineProps({
   msg: {
     type: String,
-    required: true
-  }
-})
+    required: true,
+  },
+});
 </script>
 
 <template>
