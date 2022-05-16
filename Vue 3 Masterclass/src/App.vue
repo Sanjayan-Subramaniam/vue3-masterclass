@@ -14,7 +14,6 @@ import PageHome from '@/components/PageHome.vue';
   />
 
   <div class="container">
-    <PageHome />
     <RouterView />
   </div>
 </template>
