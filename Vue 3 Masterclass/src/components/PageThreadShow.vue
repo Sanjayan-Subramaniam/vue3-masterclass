@@ -9,8 +9,15 @@ const users = sourceData.users;
 
 const route = useRoute();
 
+const props = defineProps({
+  id: {
+    type: String,
+    required: true,
+  },
+});
+
 const thread = computed(() => {
-  return threads.find((thread) => thread.id === route.params.id);
+  return threads.find((thread) => thread.id === props.id);
 });
 
 const postById = (postId) => {
