@@ -13,7 +13,8 @@ const router = createRouter({
     {
       path: '/thread/:id',
       name: 'ThreadShow',
-      component: PageThreadShow
+      component: PageThreadShow,
+      props: true
     },
     {
       path: '/about',
