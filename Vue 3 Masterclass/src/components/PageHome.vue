@@ -1,5 +1,6 @@
 <script setup>
 import sourceData from '@/data.json';
+import ThreadList from '@/components/ThreadList.vue';
 
 const threads = sourceData.threads;
 const posts = sourceData.posts;
@@ -15,38 +16,8 @@ const userById = (userId) => {
 </script>
 
 <template>
-  <div v-for="thread in threads" :key="thread.id" class="col-large push-top">
-    <h1>{{ thread.title }}</h1>
-
-    <div class="post-list">
-      <div class="post" v-for="postId in thread.posts" :key="postId">
-        <div class="user-info">
-          <a href="#" class="user-name">{{
-            userById(postById(postId).userId).name
-          }}</a>
-          <a href="#">
-            <img
-              :src="userById(postById(postId).userId).avatar"
-              alt=""
-              class="avatar-large"
-            />
-          </a>
-          <p class="desktop-only text-small">107 posts</p>
-        </div>
-
-        <div class="post-content">
-          <div>
-            <p>
-              {{ postById(postId).text }}
-            </p>
-          </div>
-        </div>
-        <div class="post-date text-faded">
-          {{ postById(postId).publishedAt }}
-        </div>
-      </div>
-    </div>
-  </div>
+  <h1>Welcome to the Forum</h1>
+  <ThreadList />
 </template>
 
 <style scoped>
