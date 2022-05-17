@@ -3,21 +3,11 @@ import sourceData from '@/data.json';
 import ThreadList from '@/components/ThreadList.vue';
 
 const threads = sourceData.threads;
-const posts = sourceData.posts;
-const users = sourceData.users;
-
-const postById = (postId) => {
-  return posts.find((p) => p.id === postId);
-};
-
-const userById = (userId) => {
-  return users.find((u) => u.id === userId);
-};
 </script>
 
 <template>
   <h1>Welcome to the Forum</h1>
-  <ThreadList />
+  <ThreadList :threads="threads" />
 </template>
 
 <style scoped>
