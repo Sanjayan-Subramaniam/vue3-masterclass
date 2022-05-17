@@ -4,3 +4,4 @@
     <router-link :to="{ name: 'home' }"> Read some cool threads </router-link>
   </div>
 </template>
+
