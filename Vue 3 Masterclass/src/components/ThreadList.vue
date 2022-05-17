@@ -2,7 +2,14 @@
 import sourceData from '@/data.json';
 import { reactive } from 'vue';
 
-const threads = reactive(sourceData.threads);
+const props = defineProps({
+  threads: {
+    type: Array,
+    required: true,
+  },
+});
+
+
 const posts = reactive(sourceData.posts);
 const users = reactive(sourceData.users);
 
